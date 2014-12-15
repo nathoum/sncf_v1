@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <title>SNCF - Défi de l'agent</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="stylesheet" href="css/introduction.css" type="text/css">
+		
+		<!--<link rel="stylesheet" href="css/jquery-ui.css">-->
+	</head>
+
+	<body>
+		<div class="backgroundblur"></div>
+		<section id="content">
+			<div id="filter-effect">
+
+				<div class="container">
+					<!--<img src="assets/img/cubes-purple.png" />-->
+					<svg id="svgcube" width="150" height="150"></svg>
+					<!--<svg id="svgcube">
+							<g style="perspective: 900px;">
+								<rect x="400" y="400" width="35" height="48" style="fill: rgb(168, 0, 128);"></rect>
+								<rect x="435" y="400" width="35" height="48" transform-origin="50% 50%" style="fill: rgb(142, 1, 109);"></rect>
+								<rect x="400" y="400" width="35" height="40" style="opacity: 1; fill: rgb(161, 0, 107);"></rect>
+							</g>
+					</svg>-->
+					<h1>Relevons le défi <br/><span class="fontbigger">ensemble</span></h1>
+					<h2>Sncf - Transilien</h2>
+					<p>Suivez chaque mois chacune de nos gares transilien, contrôlez les données de ventes et de maintenance, prenez les bonnes décisions.</p>
+				</div>
+
+				<div class="link_area">
+					<a href="search.html">Je m'informe</a>
+					<a href="action.html">J'agis</a>
+				</div>
+
+				
+			</div>
+		</section>
+
+
+
+	</body>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="js/snap.svg.js"></script>
+	<!--<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
+	<script>
+		//BACKGROUND
+		jQuery(document).ready(function () {
+		    //hide a div after 3 seconds
+		    $('.backgroundblur').addClass('blur');
+		    //$('.container img').addClass('loading-logo');
+		    $('.container').addClass('fadeIn');
+		    $('.container img').addClass('loading-opacity');
+		    $('.container h1').delay(8000).addClass('zoomIn');
+		    $('.container h2').delay(8000).addClass('zoomIn');
+		    $('.container p').delay(8000).addClass('zoomIn');
+		    $('.link_area a').delay(8000).addClass('fadeInUp');
+		    
+
+		});
+
+		var snap = Snap("#svgcube");
+		Snap.load('img/cubes.svg', 
+			function(logo) {
+				snap.append(logo);
+		});
+
+		/*setTimeout(function() {
+			$("g polygon").css("stroke-opacity", "0");
+		}, 6000);*/
+
+		
+
+
+
+
+	</script>
+
+</html>
+
+
+
+

@@ -1,0 +1,109 @@
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <title>SNCF - action</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+		<link href="css//jquery.fullPage.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="stylesheet" href="css/action.css" type="text/css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+
+
+
+	</head>
+
+	<body>
+		<div class="backgroundblur"></div>
+		<section id="content">
+			<div class="filter_area">
+				<div class="container">
+					<a class="open_legend" href="#"></a>
+					<div id="fullpage">
+					    <div class="section">
+					     	<div class="slide" id="slide1" data-anchor="slide1">
+								<div class="inspiration_area"></div>
+							</div>
+
+							<div class="slide" id="slide2" data-anchor="slide2">
+								<h1>Transilien c'est 3 millions de voyageurs chaque jour et c'est 3 millions de sourires potentiels</h1>
+								<div class="slider-area">
+									<div class="losange-slider"></div>
+									<div id="slider"></div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="intro_inspi">
+					<div class="container_legend">
+						<a class="close_legend" href="#"></a>
+						<div class="legend_cubes">
+							<p>Chaque couleur correspond à un type de maintenance</p>
+							<ul>
+								<li><img src="img/cube-application.png" alt="" /><span>Applicatif</span></li>
+								<li><img src="img/cube-data.png" alt="" /><span>Données</span></li>
+								<li><img src="img/cube-sale.png" alt="" /><span>Vente</span></li>
+								<li><img src="img/cube-aftersale.png" alt="" /><span>Après-vente</span></li>
+								<li><img src="img/cube-network.png" alt="" /><span>Réseau</span></li>
+								<li><img src="img/cube-material.png" alt="" /><span>Matériel</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="js/jquery.fullPage.js"></script> <!-- full page :navigation slides -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment-with-langs.js"></script>
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+		<script src="js/action.js"></script>
+		<script src="js/advice.js"></script>
+		<script>
+		$(document).ready(function() {
+				$('#fullpage').fullpage({
+					autoScrolling: true,
+					scrollBar: true,
+					slidesNavigation: true,
+					anchors:['info'],
+
+					//scrollOverflow: true,
+				});
+
+				$(".fp-slidesNav ul li:first-child a").html("Comment agir ?<span></span>");
+				$(".fp-slidesNav ul li:nth-child(2) a").html("Pourquoi agir ?<span></span>");
+
+				/** jquery Ui test **/
+
+				function refreshSwatch() {
+				    /*var red = $( "#red" ).slider( "value" ),
+				      green = $( "#green" ).slider( "value" ),
+				      blue = $( "#blue" ).slider( "value" ),
+				      hex = hexFromRGB( red, green, blue );*/
+				    //$( "#swatch" ).css( "background-color", "#" + hex );
+				    var value_slider = $( "#slider" ).slider( "value" )
+				    console.log($( "#slider" ).slider( "value" ));
+				    $( ".losange-slider" ).css( "height", value_slider+"px" );
+				  }
+				$(function() {
+				    /*$( "#slider" ).slider();*/
+				    $( "#slider" ).slider({
+				      orientation: "horizontal",
+				      range: "min",
+				      max: 200,
+				      value: 50,
+				      slide: refreshSwatch,
+				      change: refreshSwatch
+				    });
+
+				  });
+		});
+			 
+		</script>
+	</body>
+	</html>

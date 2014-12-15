@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <title>SNCF - Recherche de votre gare</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<!--<link rel="stylesheet" href="css/normalize.css" type="text/css">-->
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="stylesheet" href="css/search.css" type="text/css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+	</head>
+
+	<body>
+		<section id="content">
+				<!--<div class="cube">
+					<div class="flippety">
+						<h1><a href="http://www.google.fr">Agir</a></h1>
+					</div>
+					<div class="flop">
+						<h2><a href="http://www.gmail.fr">Agir</a></h2>
+					</div>
+				</div>-->
+				<!--<a class="nav-toggle" href="#">Agir</a>-->
+				<div class="toggle-button">
+					<div class="cubearea">
+						<div class="first_cube">
+							<p><a href="action.html" class="action">Agir</a></p>
+						</div>
+						<div class="second_cube">
+							<p><a href="action.html" class="action">Agir</a></p>
+						</div>
+					</div>
+				</div>
+
+				<form action="server/process-search.php" method="post" id="searchform">
+					<label for="station">Gare</label>
+					<input type="text" name="station" id="station" placeholder="INDIQUEZ VOTRE GARE" />
+					<div class="suggest-list" id="list-station"></div>
+						<input id="submit" type="submit" name="submit" value="Suivant" />
+				</form>
+		</section>
+
+
+
+	</body>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+	<script>
+		//BACKGROUND
+		jQuery(document).ready(function () {
+		    //hide a div after 3 seconds
+		    $('#filter-effect').addClass('background-effect');
+		});
+
+		$("#list-station").hide();
+		$("#submit").hide();
+
+
+
+		$("#station").keyup(function () {
+	 
+		var station = $('#station').val();
+		console.log(station);
+
+		if( station.length != 0) {
+			$("#submit").fadeIn();
+		}
+		
+		//console.log(artist.length);
+
+			$('#station').autocomplete({
+    			source : function(request, response){
+			$.ajax({
+
+				url: "server/search-autocompletion.php",
+		        data: {station : station},
+		        dataType: 'JSON',
+				success: function(data){
+					//console.log('OK !');
+					console.log(data);
+					//response( data );
+
+					response($.map(data, function(v,i){
+				    return {
+				        label: v.name
+				    };
+				}));
+
+
+
+
+				if (event.keyCode == 13) {
+					console.log("submitted enter");
+				}
+
+
+
+				},
+				error: function(){
+					console.log('Erreur');
+																			
+
+				}
+			});		
+		}
+	});
+
+		
+
+	});
+
+	</script>
+
+
+</html>
+
+
+
+

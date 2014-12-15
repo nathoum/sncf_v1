@@ -1,0 +1,123 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="stylesheet" href="css/action.css" type="text/css">
+		<link rel="stylesheet" href="css/suggest.css" type="text/css">
+
+	</head>
+
+	<body>
+		<div class="backgroundblur"></div>
+		<section id="content" class="suggest_area">
+			<div class="filter_area">
+				<!-- button 3D effect hover -->
+				<div class="toggle-button">
+					<div class="cubearea">
+						<div class="first_cube">
+							<p><a href="action.html" class="information">S'informer</a></p>
+						</div>
+						<div class="second_cube">
+							<p><a href="action.html" class="information">S'informer</a></p>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+
+				<div class="container">
+					<a class="open_legend" href="#"></a>
+				</div>
+				<!-- Legend popup -->
+					<div class="intro_inspi">
+						<div class="container_legend">
+							<a class="close_legend" href="#"></a>
+							<div class="legend_cubes">
+								<p>Chaque couleur correspond à un type de maintenance</p>
+								<ul>
+									<li><img src="img/cube-application.png" alt="" /><span>Applicatif</span></li>
+									<li><img src="img/cube-data.png" alt="" /><span>Données</span></li>
+									<li><img src="img/cube-sale.png" alt="" /><span>Vente</span></li>
+									<li><img src="img/cube-aftersale.png" alt="" /><span>Après-vente</span></li>
+									<li><img src="img/cube-network.png" alt="" /><span>Réseau</span></li>
+									<li><img src="img/cube-material.png" alt="" /><span>Matériel</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				<!---->
+				<div class="form_area">
+					<form id="idea-form" method="post" action="server/process-form.php">
+						<div class="idea-choice">
+							<div>
+								<span>
+									<input id="application" name="idea" type="radio" value="1" />
+									<label for="application" class="application">Applicatif</label>
+								</span>
+								<span>
+									<input id="data" name="idea" type="radio" value="2" />
+									<label for="data" class="data">Données</label>
+								</span>
+
+								<span>
+									<input id="sale" name="idea" type="radio" value="3" />
+									<label for="sale" class="sale">Vente</label>
+								</span>
+
+								<span>
+									<input id="aftersale" name="idea" type="radio" value="4" />
+									<label for="aftersale" class="aftersale">Après-vente</label>
+								</span>
+
+								<span>
+									<input id="network" name="idea" type="radio" value="5" />
+									<label for="network" class="network">Réseau</label>
+								</span>
+
+								<span>
+									<input id="material" name="idea" type="radio" value="6" />
+									<label for="material" class="material">Matériel</label>
+								</span>
+							</div>
+							<p class="button_next"><a id="first_next" href="#">Suivant</a></p>
+						</div>
+
+						<div class="idea-fill">
+							<h2>Soumettre une idée</h2>
+							<h3>Prenez-la parole, proposez des solutions et facilitez le processus de maintenance</h3>
+								<div class="bloc-form">
+									<p>
+							           <label for="solution">Quelle solution envisagez-vous ? Max 150 caractères</label>
+							        </p>
+							        <div class="elements-form">
+							           <textarea name="solution" id="solution" cols="40" rows="4"></textarea>						       
+
+								       <p>
+								       		<input id="submit" name="submit" type="image" src="img/arrow-next.png" value="Soumettre" />
+								       </p>
+							   		</div>
+
+					      			<p class="item-bottom"><a class="quest-before" href="#"> < Précédent</a></p>
+					      			<p class="item-bottom">2/2</p>
+					   			</div>
+						</div>
+
+					</form>
+				</div>
+				
+								<!--<li><img src="img/cube-01.png" alt="" /><span>Applicatif</span></li>
+								<li><img src="img/cube-02.png" alt="" /><span>Données</span></li>
+								<li><img src="img/cube-03.png" alt="" /><span>Vente</span></li>
+								<li><img src="img/cube-04.png" alt="" /><span>Après-vente</span></li>
+								<li><img src="img/cube-05.png" alt="" /><span>Réseau</span></li>
+								<li><img src="img/cube-06.png" alt="" /><span>Matériel</span></li>-->
+						
+
+			</div>
+		</section>
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="js/action.js"></script>
+		<script src="js/suggest.js"></script>
+	</body>
+	</html>

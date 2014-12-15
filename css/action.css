@@ -1,0 +1,246 @@
+.backgroundblur {
+	background: url("../img/background-station-blur.jpg") no-repeat fixed 0 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    position: fixed;
+	  bottom: 0;
+	  right: 0;
+	  min-width: 100%;
+	  min-height: 100%;
+	  height: auto;
+	  width: auto;
+	  z-index: -100;
+}
+
+.filter_area {
+	background-color: rgba(0,0,0,0.5);
+	min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+  display: table;
+  position: relative;
+}
+
+.container {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.inspiration_area {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.cube {
+	margin-left: 15px;
+}
+
+.cube.clickedcube {
+	position: relative;
+	z-index: 1;
+}
+
+.cube g:hover {
+	cursor: pointer;
+}
+
+.filter_popup {
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.popup_losange {
+	background: url("../img/losange-background.png") no-repeat center center;
+	width: 300px;
+	padding: 5px 20px;
+	text-align: center;
+	font-size: 1.0em;
+	z-index: 10;
+	height: 400px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	z-index: 10;
+}
+
+.popup_losange h2 {
+	margin-top: 100px;
+}
+
+.popup_losange p:first-of-type {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.popup_losange h2, .popup_losange h3 {
+	text-transform: uppercase;
+}
+
+.popup_losange .close_losange {
+	background: url("../img/icon-cross.png") no-repeat center center;
+	width: 50px;
+	padding: 10px;
+}
+
+.intro_inspi {
+	background-color: rgba(0,0,0,0.5);
+	min-width: 100%;
+	min-height: 100%;
+	height: auto;
+	width: auto;
+	display: table;
+	/* position: relative; */
+	position: absolute;
+	left: 0;
+	z-index: 100;
+}
+
+.container_legend {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+
+.legend_cubes {
+	background-color: white;
+	width: 70%;
+	max-width: 800px;
+	text-align: center;
+	padding: 0% 10%;
+	padding: 2% 0% 5% 0%;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+
+.legend_cubes p {
+	text-transform: uppercase;
+	font-size: 1.8em;
+	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.legend_cubes ul {
+	padding: 0;
+	max-width: 500px;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.legend_cubes ul li {
+	display: inline-block;
+	width: 200px;
+	text-align: left;
+	margin-bottom: 10px;
+	margin-right: 15%;
+	margin: 0 auto;
+	padding-bottom: 14px;
+}
+
+.legend_cubes ul li span {
+	margin-left: 20px;
+}
+
+.legend_cubes.fromTopToBottom {
+	-webkit-animation: toptobottom 1s forwards;
+            animation: toptobottom 1s forwards;
+}
+
+@-webkit-keyframes toptobottom {
+  0% {
+   top: -500px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes toptobottom {
+  0% {
+   top: -500px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.legend_cubes.fromBottomToTop {
+	-webkit-animation: bottomtotop 1s forwards;
+            animation: bottomtotop 1s forwards;
+}
+
+@-webkit-keyframes bottomtotop {
+  0% {
+   top: 0;
+  }
+
+  100% {
+    top: -500px;
+  }
+}
+
+@keyframes bottomtotop {
+  0% {
+   top: 0;
+  }
+
+  100% {
+    top: -500px;
+  }
+}
+
+.close_legend {
+	background: url("../img/icon-cross.png") no-repeat center center;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 50px;
+	padding: 28px 2px;
+
+}
+
+.open_legend {
+	background: url("../img/icon-plus.png") no-repeat center center;
+	position: absolute;
+	background-color: grey;
+	right: 20px;
+	top: 20px;
+	padding: 20px;
+	display: none;
+	z-index: 50;
+}
+
+#slide2 h1 {
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+	font-size: 1.7em;
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.slider-area {
+	width: 500px;
+}
+
+.losange-slider {
+	width: 60px;
+	height: 5px;
+	background-color: grey;
+}

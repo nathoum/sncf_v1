@@ -1,0 +1,517 @@
+#content:before {
+	content: '';
+	background: url('../img/station-background.jpg') no-repeat fixed 0 0;
+	-webkit-background-size: cover; /* pour Chrome et Safari */
+	  -moz-background-size: cover; /* pour Firefox */
+	  -o-background-size: cover; /* pour Opera */
+	  background-size: cover; /* version standardisée */
+	  -webkit-filter: blur(20px);
+	-moz-filter: blur(20px);
+	-ms-filter: blur(20px);
+	-o-filter: blur(20px);
+	filter: blur(20px);
+	opacity: 0,5;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.slide-content {
+	text-align: center;
+	/*background-color: grey;*/
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+}
+
+h1 {
+	color: #AD006B;
+font-size: 2.5em;
+text-align: center;
+}
+
+
+.chart {
+	height: 600px;
+	/*width: 900px;*/
+	margin-left: 50px;
+	padding-bottom: 50px;
+	display: block;
+	margin: 0 auto;
+	/*background-color: rgba(255,255,255,0.8);*/
+	padding-left: 56px;
+	width: 100%;
+	
+}
+
+
+.chart rect {
+  fill: brown;
+}
+
+.chart .groupsvg {
+	display: inline-block;
+  vertical-align: bottom;
+}
+
+.chart text {
+  fill: white;
+  font: 12px sans-serif;
+  fon-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+rect:hover {
+  fill: #E00000 ;
+}
+
+
+/*rect {
+	-webkit-transform : translate(30) rotate(45 50 50);
+}*/
+
+.groupsvg rect:nth-child(2){
+	transform-origin: 50% 50%;
+	transform: skewY(-30deg) translateY(-20px);
+}
+
+
+.groupsvg rect:first-of-type{
+	transform-origin: 50% 50%;
+	transform: skewY(30deg) translateY(-20px);
+	
+}
+
+
+.legend-area {
+	background-color: grey;
+}
+
+.legend-area p {
+	color: black;
+}
+
+
+
+
+/*g rect:nth-child(3) {
+transform-origin: 50% 50%;
+transform: rotate(59deg) translateY(-40px) translateX(-33px) skewY(-27deg);
+}*/
+
+.groupsvg rect:nth-child(3) {
+	/*transform: rotate(59deg) translateY(-40px) translateX(-33px) skewY(-27deg);*/
+	transform: rotate(60deg) translateY(-40px) translateX(-34.5px) skewY(-29.5deg);
+	transform-origin: 50% 50%;
+}
+
+.link-page {
+	border: 2px grey solid;
+	padding: 15px;
+	text-decoration: none;
+	color: black;
+	transition: background 1s;
+}
+
+.link-page:hover {
+	background-color:grey;
+	color: white;
+}
+
+.losange {
+	transform-origin: 50% 50%;
+	transform: rotate(54deg);
+}
+
+.logo_sncf, .logo_cubes {
+	width: 100px;
+	height: 50px;
+	display: block;
+	position: absolute;
+	bottom: 15px;
+	z-index: 100;
+}
+
+.logo_sncf {
+	background: url('../img/logo_sncf.png') no-repeat center center;
+	left: 20px;
+}
+
+.logo_cubes {
+	background: url('../img/logo-cubes.png') no-repeat center center;
+	right: 20px;
+}
+
+.slide-content h1 {
+	display: inline-block;
+}
+
+.help-info {
+	display: inline-block;
+	width: 42px;
+	height: 33px;
+	background: url('../img/losange.png') no-repeat center center;
+	margin-left: 20px;
+	/*border: 1px solid;*/
+	padding-left: 1px;
+	padding-top: 8px;
+	text-decoration: none;
+	font-size: 1.5em;
+	color: #AD006B;
+}
+
+/****** sales ******/
+
+.groupsvg rect:first-of-type{
+	transform-origin: 50% 50%;
+	transform: skewY(30deg) translateY(-20px);
+	
+}
+
+.chart-sales {
+	/*width: 100%;*/
+	/*width: auto;*/
+	/*height: 614px;*/
+	/*height: 430px;*/
+	height: 500px;
+	z-index: 50;
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+.groupsales rect:first-of-type{
+	transform-origin: 50% 50%;
+	transform: skewY(30deg) translateY(-20px);
+	
+}
+
+.groupsales rect:nth-child(2){
+	transform-origin: 50% 50%;
+	transform: skewY(-30deg) translateY(-20px);
+}
+
+.groupsales rect:nth-child(3) {
+	/*transform: rotate(60deg) translateY(-40px) translateX(-34.5px) skewY(-29.5deg);*/
+	/*transform: rotate(60deg) translateY(-33px) translateX(-30.5px) skewY(-29.5deg);*/
+	/*transform: rotate(60deg) translateY(-33px) translateX(-30.5px) skewY(-29.5deg);*/
+	transform: rotate(60deg) translateY(-32px) translateX(-29.5px) skewY(-29.5deg);
+	transform-origin: 50% 50%;
+}
+
+/***** info days ****/
+.slide-content .info-day {
+	/*width: 400px;
+	height: 300px;
+	margin: 0 auto;
+	margin-top: -40px;*/
+}
+
+.slide-content .info-day h2 {
+	text-transform: uppercase;
+	font-size: 1.8em;
+}
+
+.slide-content .info-day h2 span {
+	background-color: white;
+	color: rgb(109, 29, 119);
+	padding: -5px 40px;
+	font-weight: bold;
+	font-size: 2.3em;
+	display: inline-block;
+	width: 105px;
+	padding-top: 15px;
+}	
+
+.slide-content .info-day p:first-of-type {
+	text-transform: uppercase;
+}
+
+.slide-content .info-day p:nth-of-type(2) {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2.5em;
+	margin-top: -10px;
+}
+
+.slide-content .info-day p:nth-of-type(2) span {
+	color: rgb(109, 29, 119);
+}
+
+
+.push-info {
+	position: absolute;
+	z-index: 1000;
+	width: 35%;
+	background-color: white;
+	/*height: 100%;*/
+	top: 0;
+	right: -800px;
+	/*right: -80%;*/
+	opacity: 0;
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 35px;
+}
+
+.push-info h3 {
+	/*margin-top: 150px;*/
+	font-size: 1.563em;
+	font-weight: lighter;
+}
+
+.push-info h4 {
+	font-size: 2.688em;
+	color: #BF0085;
+}
+
+.push-info a:first-child {
+	display: block;
+	background-color: grey;
+	width: 150px;
+	height: 100px;
+	margin-left: 5%;
+}
+
+.push-info p:nth-child(4), .push-info p:nth-child(5) {
+	font-size: 1.9em;
+}
+.push-info p:nth-child(4) {
+	margin-top: -40px;
+}
+
+.push-info p:nth-child(5)  {
+	margin-top: -30px;
+}
+
+.push-info .key-info p:first-of-type {
+	border-right: 1px solid black;
+}
+
+.push-info .key-info p {
+	display: inline-block;
+	padding: 30px;
+	font-size: 1.2em;
+}
+
+.push-info .key-info p span {
+	color: #BF0085;
+	font-weight: bold;
+	font-size: 2.4em;
+}	
+
+.push-info .change-station {
+	border: 1px solid #BF0085;
+	padding: 20px 17px;
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-decoration: none;
+	color: #BF0085;
+	font-weight: bold;
+	background-color: transparent;
+	-webkit-transition: background 1s;
+	transition: background 1s;
+}
+
+.push-info .change-station:hover {
+	background-color: #BF0085;
+	color: white;
+}
+
+
+
+@-webkit-keyframes openInfo {
+  0% {
+    right: -800px;
+  }
+
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes openInfo {
+  0% {
+    right: -800px;
+  }
+
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+/*
+@-webkit-keyframes pushContent {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -300px;
+  }
+}
+
+@keyframes pushContent {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -300px;
+  }
+}
+
+@-webkit-keyframes pushSvg {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -500px;
+  }
+}
+
+@keyframes pushSvg {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -500px;
+  }
+}
+
+@-webkit-keyframes pushMenu {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -300px;
+  }
+}
+
+@keyframes pushMenu {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -300px;
+  }
+}
+
+*/
+.push-info.open-menu {
+	-webkit-animation: openInfo 0.5s forwards;
+          animation: openInfo 0.5s forwards;
+}	
+
+
+/*
+.slide-content.push-content {
+	-webkit-animation: pushContent 0.5s forwards;
+          animation: pushContent 0.5s forwards;
+}*/
+
+#slide1 .svg_area {
+	width: 90%;
+overflow-x: auto;
+/*background-color: grey;*/
+position: absolute;
+margin-bottom: 100px;
+}
+
+.svg_area {
+	width: 90%;
+}
+
+/*
+.svg_area.push-svg {
+	-webkit-animation: pushSvg 0.5s forwards;
+          animation: pushSvg 0.5s forwards;
+}
+
+.fp-slidesNav.push-menu {
+	-webkit-animation: pushMenu 0.5s forwards;
+          animation: pushMenu 0.5s forwards;
+}*/
+
+
+/**** MOBILE STYLES ******/
+
+/*@media screen and (min-width: 641px) {
+	html, body {
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	html, body {
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+}*/
+
+
+/**** menu bottom ****/
+@media screen and (max-width: 660px) {
+	body {
+		font-size: 0.8em;
+	}
+
+	.logo_sncf, .logo_cubes {
+		display: none;
+	}
+
+	.slide-content h1 {
+		padding: 0px 10px;
+	}
+
+	.push-info{
+		width: 100%;
+	}
+
+	.chart {
+		height: 900px;
+	}
+
+	.chart-sales {
+		height: 1850px;
+	}
+
+	/*
+	.groupsvg:nth-of-type(3) {
+		transform: translate(-300px, 250px);
+	}
+
+	.groupsvg:nth-of-type(4) {
+		transform: translate(-300px, 250px);
+	}
+
+	.groupsvg:nth-of-type(5) {
+		transform: translate(-600px, 500px);
+	}
+
+	.groupsvg:nth-of-type(6) {
+		transform: translate(-600px, 500px);
+	}*/
+
+}
+
+.ui-draggable {
+	top: -100px;
+}
+
+
